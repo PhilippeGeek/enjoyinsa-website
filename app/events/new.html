@@ -1,10 +1,20 @@
 <md-content layout-padding="">
-    <md-input-container class="md-block">
-        <label>Organisateur</label>
-        <input ng-model="event.organizator">
-    </md-input-container>
-    <md-input-container class="md-block">
-        <label>Email</label>
-        <input ng-model="event.organizator_email" type="email">
-    </md-input-container>
+    <md-content layout="row" layout-wrap="">
+        <md-input-container flex="100">
+            <label>Nom de l'évènement</label>
+            <input ng-model="event.title">
+        </md-input-container>
+        <md-input-container flex="50">
+            <label>Organisateur</label>
+            <input ng-model="event.organizator">
+        </md-input-container>
+        <md-input-container flex="50">
+            <label>Email</label>
+            <input ng-model="event.organizator_email" type="email">
+        </md-input-container>
+        <md-input-container flex="100">
+            <label>Description</label>
+            <textarea ng-model="event.description"></textarea>
+        </md-input-container>
+    </md-content>
 </md-content>
