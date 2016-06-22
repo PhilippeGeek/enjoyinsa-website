@@ -5,6 +5,7 @@ angular.module('enjoyinsa', [
   'ngRoute',
     'ngMaterial',
   'enjoyinsa.view1',
+  'enjoyinsa.events',
   'enjoyinsa.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
