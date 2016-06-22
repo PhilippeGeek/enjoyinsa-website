@@ -1,6 +1,6 @@
 'use strict';
 
-angular.module('enjoyinsa.view1', ['ngRoute', 'material.svgAssetsCache'])
+angular.module('enjoyinsa.view1', ['ngRoute'])
 
 .config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/view1', {

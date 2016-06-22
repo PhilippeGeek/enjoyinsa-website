@@ -11,8 +11,7 @@ config(['$locationProvider', '$routeProvider', function($locationProvider, $rout
   $locationProvider.hashPrefix('!');
 
   $routeProvider.otherwise({redirectTo: '/view1'});
-}]);
-app.config(function($mdIconProvider) {
+}]).config(function($mdIconProvider) {
     $mdIconProvider
-        .defaultIconSet('my/app/mdi.svg')
+        .defaultIconSet('mdi.svg')
 });
