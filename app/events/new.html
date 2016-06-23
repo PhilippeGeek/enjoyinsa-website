@@ -1,20 +1,22 @@
-<md-content layout-padding="">
-    <md-content layout="row" layout-wrap="">
-        <md-input-container flex="100">
-            <label>Nom de l'évènement</label>
-            <input ng-model="event.title">
-        </md-input-container>
-        <md-input-container flex="50">
-            <label>Organisateur</label>
-            <input ng-model="event.organizator">
-        </md-input-container>
-        <md-input-container flex="50">
-            <label>Email</label>
-            <input ng-model="event.organizator_email" type="email">
-        </md-input-container>
-        <md-input-container flex="100">
-            <label>Description</label>
-            <textarea ng-model="event.description"></textarea>
-        </md-input-container>
-    </md-content>
+<md-content layout-padding="" layout="row" layout-wrap="">
+    <form name="eventForm" flex-auto="" layout="row" layout-wrap="" ng-submit="send($event)">
+        <md-content layout="row" layout-wrap="" flex="100">
+            <md-input-container flex="50">
+                <label>Nom de l'évènement *</label>
+                <input name="title" ng-model="event.title" required>
+                <div ng-messages="eventForm.title.$error" ng-hide="showHints">
+                    <div ng-message="blank">Doit être remplis.</div>
+                </div>
+            </md-input-container>
+            <md-input-container flex="50">
+                <label>Organisateur</label>
+                <input ng-model="event.organizator">
+            </md-input-container>
+            <md-input-container flex="100">
+                <label>Description</label>
+                <textarea ng-model="event.description"  md-maxlength="300" rows="5" md-select-on-focus></textarea>
+            </md-input-container>
+        </md-content>
+        <button type="submit" class="md-button md-primary md-raised" flex-grow="" md-swipe-left="" ng-click="send()">Proposer mon évènement</button>
+    </form>
 </md-content>
