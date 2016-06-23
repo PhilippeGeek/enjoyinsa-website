@@ -18,7 +18,7 @@ angular.module('enjoyinsa.events', ['ngRoute', 'ngMaterial','ngMessages'])
     .controller('EventsCtrl', function ($scope, $http) {
         $scope.events = [];
         $http.get(remote_server+'/events').then(function(data){
-            console.log(data)
+            $scope.events = data.data;
         });
         $scope.addNew=function(){
            window.location.href = "#!/events/new"
